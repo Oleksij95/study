@@ -1,32 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <TheHead />
+    <div class="page_content">
+      <router-view />
     </div>
-    <router-view />
+    <TheSidebar />
   </div>
 </template>
 
+<script>
+import TheSidebar from './components/TheSidebar.vue';
+import TheHead from './components/TheHead.vue';
+export default {
+  components: {
+    TheSidebar,
+    TheHead,
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+body {
+  padding: 0 0 0 276px;
+  margin: 0;
+  background: #000;
+  font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+  &.light {
+    background: #fff;
   }
+}
+.page_content {
+  padding: 25px 40px;
 }
 </style>
