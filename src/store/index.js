@@ -5,6 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    user: {},
     theme: 'dark',
   },
   mutations: {
@@ -19,6 +20,7 @@ export default new Vuex.Store({
   },
   getters: {
     THEME: (s) => s.theme,
+    USER: (s) => s.user,
   },
   modules: {},
 });
