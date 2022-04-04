@@ -23,6 +23,8 @@ const localization = {
     joined: 'joined',
     join_now: 'Join Now',
     all_events: 'All Events',
+    delete: 'Delete',
+    save: 'Save',
   },
   uk: {
     dashboard: 'Панель',
@@ -48,6 +50,8 @@ const localization = {
     joined: 'приєднався',
     join_now: 'Приєднатися',
     all_events: 'Усі події',
+    delete: 'Видалити',
+    save: 'Зберегти',
   },
 };
 

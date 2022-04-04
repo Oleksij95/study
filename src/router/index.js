@@ -5,6 +5,7 @@ import ExamDate from '../views/ExamDate';
 import ClassRoom from '../views/ClassRoom';
 import Settings from '../views/Settings';
 import SigIn from '../views/SigIn';
+import NoticeBoard from '../views/NoticeBoard';
 
 import store from '../store';
 
@@ -39,6 +40,12 @@ const routes = [
     path: '/settings',
     name: 'Settings',
     component: Settings,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/notice-board',
+    name: 'NoticeBoard',
+    component: NoticeBoard,
     meta: { requiresAuth: true },
   },
 ];

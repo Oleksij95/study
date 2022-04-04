@@ -13,9 +13,6 @@ import TheSidebar from './components/TheSidebar.vue';
 import TheHead from './components/TheHead.vue';
 import { mapGetters } from 'vuex';
 export default {
-  beforeMount() {
-    console.log(this.USER);
-  },
   computed: {
     ...mapGetters(['USER']),
   },
