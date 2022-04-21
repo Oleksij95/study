@@ -24,7 +24,7 @@ export default {
 <style lang="scss" scoped>
 .head {
   padding: 17px 40px 17px 316px;
-  background: #0b0a0a;
+  background: #0e0d0d;
   display: flex;
   justify-content: space-between;
   align-items: center;

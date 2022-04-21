@@ -6,6 +6,8 @@ import ClassRoom from '../views/ClassRoom';
 import Settings from '../views/Settings';
 import SigIn from '../views/SigIn';
 import NoticeBoard from '../views/NoticeBoard';
+import Notification from '../views/Notification';
+import Results from '../views/Results';
 
 import store from '../store';
 
@@ -46,6 +48,18 @@ const routes = [
     path: '/notice-board',
     name: 'NoticeBoard',
     component: NoticeBoard,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/notification',
+    name: 'Notification',
+    component: Notification,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/results',
+    name: 'Results',
+    component: Results,
     meta: { requiresAuth: true },
   },
 ];

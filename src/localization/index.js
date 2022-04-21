@@ -25,6 +25,7 @@ const localization = {
     all_events: 'All Events',
     delete: 'Delete',
     save: 'Save',
+    no_notification: 'No notification',
   },
   uk: {
     dashboard: 'Панель',
@@ -52,6 +53,7 @@ const localization = {
     all_events: 'Усі події',
     delete: 'Видалити',
     save: 'Зберегти',
+    no_notification: 'Немає сповіщень',
   },
 };
 

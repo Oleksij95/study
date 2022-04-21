@@ -3,16 +3,6 @@
     <h3>{{ $t('settings') }}</h3>
     <div class="settings_list">
       <div class="settings_list__item">
-        <div class="settings_name">{{ $t('theme') }}</div>
-        <div class="settings_tumbler">
-          <div
-            class="settings_tumbler__indicator"
-            :class="{ light: THEME === 'light' }"
-            @click="changeTheme($event)"
-          ></div>
-        </div>
-      </div>
-      <div class="settings_list__item">
         <div class="settings_name">{{ $t('language') }}</div>
         <select v-model="$i18n.locale" @change="changeLanguage($i18n.locale)">
           <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">
@@ -33,17 +23,10 @@ export default {
     };
   },
   methods: {
-    changeTheme(e) {
-      e.target.classList.toggle('light');
-      document.querySelector('body').classList.toggle('light');
-    },
     changeLanguage(language) {
       localStorage.setItem('language', language);
     },
     ...mapActions({}),
-  },
-  beforeMount() {
-    console.log(this.$i18n.locale);
   },
   computed: {
     ...mapGetters(['THEME']),
@@ -85,30 +68,6 @@ export default {
 
   .settings_name {
     margin-bottom: 10px;
-  }
-
-  .settings_tumbler {
-    width: 80px;
-    height: 40px;
-    border-radius: 25px;
-    background: #000;
-    position: relative;
-    padding: 4px;
-    box-sizing: border-box;
-    .settings_tumbler__indicator {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      top: 5px;
-      left: 5px;
-      background: #fff;
-      cursor: pointer;
-      transition: all 0.4s;
-      &.light {
-        left: 55%;
-      }
-    }
   }
 }
 </style>
